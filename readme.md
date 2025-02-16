@@ -21,7 +21,7 @@ An educational implementation of a multimodal language model combining vision an
 
 ```git clone https://github.com/akshaykumar46/Multimodal_LLM_from_scratch cd Multimodal_LLM_from_scratch```
 ### Install dependencies
-```pip install -r requirements.txt  # Create this file with your dependencies```
+```pip install -r requirements.txt ```
 ### Download pretrained weights
 ```chmod +x download_weights.sh ./download_weights.sh```
 

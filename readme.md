@@ -21,7 +21,7 @@ An educational implementation of a multimodal language model combining vision an
 
 ```git clone https://github.com/akshaykumar46/Multimodal_LLM_from_scratch cd Multimodal_LLM_from_scratch```
 ### Install dependencies
-```pip install -r requirements.txt ```
+```pip install -r requirements.txt  # Create this file with your dependencies```
 ### Download pretrained weights
 ```chmod +x download_weights.sh ./download_weights.sh```
 
@@ -29,9 +29,24 @@ An educational implementation of a multimodal language model combining vision an
 ## Quick Start
 
 ### Basic Inference
-```python inference.py
-–image-path samples/cricket.jpg
-–prompt “Identify the sport being played”
-–temperature 0.7
-–max-new-tokens 50
+```
+MODEL_PATH="/paligemma_weight_loc"
+PROMPT="prompt"
+IMAGE_FILE_PATH="image.jpg"
+MAX_TOKENS_TO_GENERATE=50
+TEMPERATURE=0.8
+TOP_P=0.9
+DO_SAMPLE="True"
+ONLY_CPU="False"
+```
+```
+python inference.py \
+	--model_path "$MODEL_PATH" \
+	--prompt "$PROMPT" \
+	--image_file_path "$IMAGE_FILE_PATH" \
+	--max_tokens_to_generate "$MAX_TOKENS_TO_GENERATE" \
+	--temperature "$TEMPERATURE" \
+	--top_p "$TOP_P" \
+	--do_sample "$DO_SAMPLE" \
+	--only_cpu "$ONLY_CPU" \
 ```
